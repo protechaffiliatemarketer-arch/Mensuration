@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>3D Shapes - Mensuration Website</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background: #eef2f7; color: #333; line-height:1.6; }
+
+    /* Header / Navigation */
+    header.nav {
+      position: sticky; top:0; z-index:1000;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 30px;
+      background: linear-gradient(90deg, #1d2671, #c33764);
+      color: #fff;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    header.nav .brand { display: flex; align-items: center; gap: 10px; font-weight:bold; font-size:1.3em; }
+    header.nav .brand img { width:40px; height:40px; border-radius:50%; }
+    nav.nav-links { display: flex; flex-wrap: wrap; gap:15px; }
+    nav.nav-links a {
+      color:#fff; text-decoration:none; padding:7px 14px;
+      border-radius:20px; transition:0.3s;
+    }
+    nav.nav-links a:hover, nav.nav-links a.active {
+      background:#fff; color:#c33764; font-weight:bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align:center; padding:100px 20px 70px;
+      background: linear-gradient(135deg, #c33764, #1d2671);
+      color:#fff;
+      animation: fadeIn 1.2s ease-in;
+    }
+    .hero h1 { font-size:3em; margin-bottom:15px; }
+    .hero p { font-size:1.3em; opacity:0.95; }
+
+    /* Sections */
+    .section {
+      max-width:800px; margin:50px auto; padding:40px 20px;
+      border-radius:15px;
+      background: #ffffff;
+      animation: fadeInUp 1s ease-in;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    .section h2 { color:#1d2671; margin-bottom:20px; font-size:2.2em; text-align:center; }
+
+    /* Cards (vertical) */
+    .card {
+      background:#fdfdfd; border-radius:15px; padding:25px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.5s ease-in;
+      text-align:center;
+      margin-bottom:25px;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.15); }
+    .card h3 { color:#c33764; margin-bottom:12px; }
+    .card p { font-size:1em; }
+    .icon { font-size:2.5em; margin-bottom:10px; }
+
+    /* Footer */
+    footer {
+      text-align:center; padding:25px;
+      background: linear-gradient(90deg, #c33764, #1d2671);
+      color:#fff; font-size:0.95em; margin-top:50px;
+    }
+    footer a { color:#fff; text-decoration:underline; }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity:0;} to {opacity:1;}
+    }
+    @keyframes fadeInUp {
+      from {opacity:0; transform:translateY(20px);} 
+      to {opacity:1; transform:translateY(0);}
+    }
+
+    @media(max-width:600px){
+      header.nav { flex-direction:column; align-items:flex-start; gap:10px; }
+      nav.nav-links { flex-direction:column; width:100%; }
+    }
+  .card1 {      background:#fdfdfd; border-radius:15px; padding:25px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.5s ease-in;
+      text-align:center;
+      margin-bottom:25px;
+}
+  .style1 {color: #333333}
+  .card2 {      background:#fdfdfd; border-radius:15px; padding:25px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.5s ease-in;
+      text-align:center;
+      margin-bottom:25px;
+}
+  </style>
+</head>
+<body>
+
+  <header class="nav"> 
+    <div class="brand">
+      <img src="assets/triangle.png" alt="CT" />
+      <span>Mensuration • SHS</span>
+    </div>
+    <nav class="nav-links">
+      <p>&nbsp;</p>
+      <p><a href="home.html">Home</a>
+          <a href="intro.html">Introduction</a>
+         <a href="2d_shapes.html">2D Shapes</a>
+         <a href="3d_shapes.html" class="active">3D Shapes</a>
+         <a href="resources.html">Resources</a>
+         <a href="applications.html">Applications</a>
+         <a href="videos.html">Videos</a>
+        <a href="quizzes.html">Quizzes</a>
+         <a href="authors.html">Authors</a>
+          
+      </p>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>3D Shapes - Surface Area and Volume </h1>
+    <p>Explore the world of 3D (solid) shapes, their formulas, and properties.</p>
+  </section>
+
+  <section class="section">
+    <h2>What are 3D Shapes?</h2>
+    <p>3D (three-dimensional) shapes are solid figures that have length, width, and height. They occupy space and have volume. Examples include cubes, spheres, cylinders, and cones.</p>
+  </section>
+
+  <div class="section">
+    <h2>Common 3D Shapes</h2>
+
+    <div class="card">
+      <span class="card2"><img src="assets/cube.png" alt="Author 2" width="357" height="254"></span>
+      <h3>Cube</h3>
+      <p align="left">A <strong>cube</strong> is a 3-D solid   shape, which has 6 faces. A cube is one of the simplest shapes in   three-dimensional space. All the six faces of a cube are squares, a   two-dimensional shape.</p>
+      <p align="left"><strong>Volume of Cube</strong></p>
+      <p align="left">The <a href="https://byjus.com/maths/volume-of-a-cube/">volume of the cube</a> is the space contained in it. Suppose, if an object is in cubical shape   and we need to immerse any material in it, say water, then the measure   of water in litres to be kept in the object is calculated by its volume.   The formula of the volume is given by:</p>
+      
+      <div align="left">
+        <table width="470">
+          <tbody>
+            <tr>
+              <td><ul>
+                <li><strong>Volume of cube =  a&sup3; cubic units</strong></li>
+              </ul></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Surface Area of a Cube</strong></p>
+      <p align="left">We know that for any shape, the area is defined as the region   occupied by it in a plane. A cube is a three-dimensional object,   therefore, the area occupied by it will&nbsp;be   in a 3d plane. Since a cube has six faces, therefore, we need to   calculate the surface area of the cube, covered by each face. The formula to find the surface area can be found as given below.</p>
+      <p align="left">Let a be the edge of the cube.</p>
+      <p align="left">Area of one face = Area of a square = a2</p>
+      <p align="left">We know that the cube has 6 square shaped faces.</p>
+      <p align="left">Lateral surface area (excluding the top and bottom faces) = 4 &times; Area of one face</p>
+      <p align="left">LSA = 4a2</p>
+      <p align="left">Total surface area = LSA + Area of the top and bottom faces</p>
+      <p align="left">TSA = 4a2&nbsp;+ a2&nbsp;+ a2</p>
+      <p align="left">TSA = 6a2</p>
+      <div align="left">
+        <table width="470">
+          <tbody>
+            <tr>
+              <td><ul>
+                  <li><strong>Surface Area of Cube = 6a&sup2; in a square units</strong></li>
+              </ul></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong><strong>Example 1:</strong></strong></p>
+      <p align="left">If the value of the side of the cube is 10 cm, then find its surface area and volume.</p>
+      <p align="left"><strong>Solution:</strong></p>
+      <p align="left">Given, side, a = 10 cm</p>
+      <p align="left">Therefore, by the surface area and volume formula of the cube, we can write;</p>
+      <p align="left">Surface Area = 6a2 = 6 &times; 102 = 6 &times; 100.= <strong>600 cm2</strong></p>
+      <p align="left">Volume = a3 = 103 = <strong>1000 cm3</strong></p>
+      <p align="left">&nbsp;</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/cuboid1.png" alt="Author 2" width="559" height="252">
+      <h3>Cuboid</h3>
+      <p align="left">In geometry, a <strong>cuboid</strong> is a solid shape or a three-dimensional shape. A convex polyhedron that   is bounded by six rectangular faces with eight vertices and twelve edges   is called a cuboid. A cuboid is also called a&nbsp;<a href="https://byjus.com/maths/rectangular-prism/">rectangular prism</a>.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>VOLUME OF CUBOID </strong></p>
+      <p align="left">The volume of a solid is equal to the product of the base area and its height. Thus, the <a href="https://byjus.com/maths/volume-of-cuboid/">volume of cuboid</a> is equal to the product of the base rectangular face and height.</p>
+      <p align="left">Volume = (Length &times; Breadth) &times; Height</p>
+      <p align="left">= (l &times; b) &times; h</p>
+      <p align="left">= lbh</p>
+      
+      <div align="left">
+        <table>
+          <tbody>
+            <tr>
+              <td><strong>Volume (V) = (l </strong>&times; <strong>b </strong>&times; <strong>h) cubic units</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 align="left">&nbsp;</h3>
+      <h3 align="left">Cuboid Total Surface Area</h3>
+      <p align="left">Total surface area (TSA) of a cuboid is the sum of the areas of all its rectangular faces.</p>
+      <p align="left">Area of face EFGH = Area of Face ABCD = (l &times; b)</p>
+      <p align="left">Area of face BFGC = Area of face AEHD = (b &times; h)</p>
+      <p align="left">Area of face DHGC = Area of face ABFE = (l &times; h)</p>
+      <p align="left">Total surface area of a cuboid = Sum of the areas of all its 6 rectangular faces</p>
+      <p align="left">= Area of (ABCD + EFGH + BFGC + AEHD + DHGC + ABFE)</p>
+      <p align="left">= (l &times; b) + (l &times; b) + (b &times; h) + (b &times; h) + (l &times; h) + (l &times; h)</p>
+      <p align="left">= 2lb + 2bh + 2hl</p>
+      <p align="left">= 2(lb + bh + hl)</p>
+      
+      <div align="left">
+        <table>
+          <tbody>
+            <tr>
+              <td><strong>Total Surface Area (TSA) = 2(lb + bh + hl) sq.units</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Example 1:</strong></p>
+      <p align="left">Find the volume of a cuboid of length 10 cm, breadth 8 cm and height 4 cm.</p>
+      <p align="left"><strong>Solution:</strong></p>
+      <p align="left">Given,</p>
+      <p align="left">Length = l = 10 cm</p>
+      <p align="left">Breadth = b = 8 cm</p>
+      <p align="left">Height = h = 4 cm</p>
+      <p align="left">Volume = lbh</p>
+      <p align="left">= 10 &times; 8 &times; 4</p>
+      <p align="left">= 320 cm3</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Example 2: </strong></p>
+      <p align="left">Calculate the lateral and total surface area of a cuboid of dimensions 12 cm &times; 7 cm &times; 5 cm.</p>
+      <p align="left"><strong>Solution:</strong></p>
+      <p align="left">Given dimensions of a cuboid are: 12 cm &times; 7 cm &times; 5 cm</p>
+      <p align="left">i.e., l = 12 cm, b = 7 cm, h = 5 cm</p>
+      <p align="left">Lateral surface area (LSA) = 2h(l + b)</p>
+      <p align="left">= 2 &times; 5 (12 + 7)</p>
+      <p align="left">= 10 &times; 19</p>
+      <p align="left">= 190 cm2</p>
+      <p align="left">Total surface area (TSA) = 2(lb + bh + hl)</p>
+      <p align="left">= 2(12 &times; 7 + 7 &times; 5 + 5 &times; 12)</p>
+      <p align="left">= 2(84 + 35 + 60)</p>
+      <p align="left">= 358 cm2</p>
+      <p align="left">&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/cylinder.png" alt="Author 2" width="364" height="235">
+      <h3>Cylinder</h3>
+      <p align="left">In mathematics, a cylinder is a three-dimensional solid that holds two   parallel bases joined by a curved surface, at a fixed distance. These   bases are normally circular in shape (like a <a href="https://byjus.com/maths/circles/">circle</a>)   and the center of the two bases are joined by a line segment, which is   called the axis. The perpendicular distance between the bases is the   height, &ldquo;h&rdquo; and the distance from the axis to the outer surface is the   radius &ldquo;r&rdquo; of the cylinder.</p>
+      <h3 align="left">Curved Surface Area of Cylinder</h3>
+      <p align="left">The area of the curved surface of the cylinder which is contained   between the two parallel circular bases. It is also stated as a lateral   surface area. The formula for it is given by:</p>
+      <div align="left">
+        <table>
+          <tbody>
+            <tr>
+              <td>Curved Surface Area = 2&pi;rh square units</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 align="left">Total Surface Area of Cylinder</h3>
+      <p align="left">The total surface area of a cylinder is the sum of curved surafce area and the area of two circular bases.<br>
+        TSA = Curved surface + Area of Circular bases<br>
+        TSA = 2&pi;rh + 2&pi;r2<br>
+        We can see, from the above expression, 2&pi;r is common. Therefore,</p>
+      <div align="left">
+        <table>
+          <tbody>
+            <tr>
+              <td>Total surface area, A = 2&pi;r(r+h) square units</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 align="left">Volume of Cylinder</h3>
+      <p align="left">Every three dimensional shape or a solid has volume that occupies some space. The <a href="https://byjus.com/maths/volume-of-a-cylinder/">volume of the cylinder</a> is the space occupied by it in any three-dimensional plane. The amount   of water that could be immersed in a cylinder is described by its   volume. The formula for the volume of cylinder is given by:</p>
+      <div align="left">
+        <table>
+          <tbody>
+            <tr>
+              <td>Volume of the Cylinder, V = &pi;r2h cubic units</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p align="left">Where &lsquo;h&rsquo; is the height and &lsquo;r&rsquo; is the radius.<br>
+          <strong>Also, read:</strong>&nbsp;<a href="https://byjus.com/maths/area-of-hollow-cylinder/">Area Of Hollow Cylinder</a></p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Question 1:</strong> Find the total surface area of the cylinder, whose radius is 5cm and height is 10cm?</p>
+      <p align="left"><strong>Solution</strong>: We know, from the formula,</p>
+      <p align="left">Total surface area of a cylinder, A = 2&pi;r(r+h) square units</p>
+      <p align="left">Therefore, A = 2&pi; &times; 5(5 + 10) = 2&pi; &times; 5(15) = 2&pi; &times; 75 = 150 &times; 3.14 = 471 cm2</p>
+      <p align="left"><strong>Question 2:&nbsp;What is the volume of a cylindrical shape water container, that has a height of 7cm and diameter of 10cm?</strong></p>
+      <p align="left"><strong>Solution: </strong>Given,</p>
+      <p align="left">Diameter of the container = 10cm</p>
+      <p align="left">Thus, the radius of the container = 10/2 = 5cm</p>
+      <p align="left">Height of the container = 7cm</p>
+      <p align="left">As we know, from the formula,</p>
+      <p align="left">Volume of a cylinder = &pi;r2h cubic units.</p>
+      <p align="left">Therefore, volume of the given container, V = &pi; &times; 52 &times; 7</p>
+      <p align="left">V = &pi; &times; 25 &times; 7 = (22/7) &times; 25 &times; 7 = 22 &times; 25</p>
+      <p align="left">V = 550 cm3</p>
+    </div>
+
+    <div class="card">
+     <img src="assets/cone1.png" alt="Author 2" width="229" height="212">
+      <h3>Cone</h3>
+      <p align="left">A <strong>cone</strong> is a three-dimensional shape in geometry   that narrows smoothly from a flat base (usually circular base) to a   point(which forms an axis to the centre of base) called the apex or   vertex. We can also define the cone as a pyramid which has a circular   cross-section, unlike pyramid which has a triangular cross-section.   These cones are also stated as a circular cone.</p>
+      <h3 align="left">Slant Height</h3>
+      <p align="left">The slant height of the cone (specifically right circular) is the   distance from the vertex or apex to the point on the outer line of the   circular base of the cone. The formula for slant height can be derived   by the <a href="https://byjus.com/maths/pythagoras-theorem/">Pythagoras Theorem</a>.</p>
+      <p align="left"><strong>Slant Height, <em>l = </em>&radic;(r2+h2)</strong></p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>VOLUME OF A CONE </strong></p>
+      <p align="left">We can write, the volume of the cone(V) which has a radius of its   circular base as &ldquo;r&rdquo;, height from the vertex to the base as &ldquo;h&rdquo;, and   length of the edge of the cone is &ldquo;<em>l&rdquo;</em>.</p>
+      <p align="left"><strong>Volume(V) = &#8531; &pi;r2h cubic units</strong></p>
+      <h3 align="left">Surface Area of the Cone</h3>
+      <p align="left">The surface area of a right circular cone is equal to the sum of its lateral surface area(&pi;r<em>l</em>) and surface area of the circular base(&pi;r2). Therefore,</p>
+      <p align="left"><strong>The total surface area of the cone = &pi;r<em>l + </em>&pi;r2</strong></p>
+      <p align="left">Or</p>
+      <p align="left"><strong>Area = &pi;r(<em>l + </em>r) </strong></p>
+      <p align="left">We can put the value of slant height and calculate the area of the cone.</p>
+      <p align="left"><strong>Question:</strong> Find the volume of the cone if radius, r = 4 cm and height, h = 7 cm.</p>
+      <p align="left"><strong>Solution:</strong> By the formula of volume of the cone, we get,</p>
+      <p align="left">V = &#8531; &pi;r2h</p>
+      <p align="left">V = (&#8531;) &times; (22/7) &times; 42 &times; 7</p>
+      <p align="left">V = 117.33 Cubic Cm</p>
+      <p align="left"><strong>Question:</strong> What is the total surface area of the cone with the radius = 3 cm and height = 5 cm?</p>
+      <p align="left"><strong>Solution</strong>: By the formula of the surface area of the cone, we know,</p>
+      <p align="left">Area = &pi;r(<em>l + </em>r)</p>
+      <p align="left">Since, slant height <em>l = </em>&radic;(r2+h2) = &radic;(32+52) = &radic;(9+25) = &radic;34</p>
+      <p align="left">Therefore,</p>
+      <p align="left">Area, A = &pi; &times; 3(&radic;34<em> + </em>3) = &pi; &times; 3(5.83<em> + </em>3) = &pi; &times; 3(8.83) = 83.22 Cm2</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+
+    <div class="card">
+     <img src="assets/sphere.jpg" alt="Author 2" width="336" height="196">
+      <h3>Sphere</h3>
+      <p align="left">sphere is a geometrical figure that is   round in shape. The sphere is defined in a three-dimensional space. The   sphere is three dimensional solid, that has surface area and volume.   Just like a circle, each point of the sphere is at an equal distance   from the center.&nbsp;</p>
+      <p align="left">&nbsp;</p>
+      <h3 align="left">Surface Area of a Sphere</h3>
+      <p align="left">The surface area of a sphere is the   total area covered by the surface of a sphere in a three-dimensional   space. The formula of surface are is given by:</p>
+      <div align="left">
+        <table>
+          <tbody>
+            <tr>
+              <td><p align="center"><strong>The Surface Area of a Sphere(SA) = 4&pi;r2 Square units</strong></p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 align="left" class="style1">Where &ldquo;r&rdquo; is the radius of the sphere.</h3>
+      <p align="left" class="style1">&nbsp;</p>
+      <h3 align="left">Volume of a Sphere</h3>
+      <p align="left">The amount of space occupied by the object three-dimensional object called a sphere is known as the <a href="https://byjus.com/maths/volume-of-sphere/">volume of the sphere</a>.&nbsp;</p>
+      <p align="left">According to the Archimedes Principle, the volume of a sphere is given as,</p>
+      <div align="left">
+        <table>
+          <tbody>
+            <tr>
+              <td><p><strong>The volume of Sphere(V) = 4/3 &pi;r3 Cubic Units</strong></p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Example 1:&nbsp;</strong></p>
+      <p align="left">Find the volume of the sphere that has a diameter of 10 cm?</p>
+      <p align="left"><strong>Solution:</strong></p>
+      <p align="left">Given, Diameter, d = 10 cm</p>
+      <p align="left">We know that D = 2 r units</p>
+      <p align="left">Therefore, the radius of a sphere, r = d / 2 = 10 / 2 = 5 cm</p>
+      <p align="left">To find the volume:</p>
+      <p align="left">The <strong>volume of sphere = 4/3 &pi;r3 Cubic Units</strong></p>
+      <p align="left">V = (4/3)&times; (22/7) &times;53</p>
+      <p align="left">Therefore, the volume of sphere, V = 522 cubic units</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Example 2:&nbsp;</strong></p>
+      <p align="left">Determine the surface area of a sphere having a radius of 7 cm.</p>
+      <p align="left"><strong> Solution:</strong></p>
+      <p align="left">Given radius = 7 cm</p>
+      <p align="left"><strong>The Surface Area of a Sphere(SA) = 4&pi;r2 Square units</strong></p>
+      <p align="left">SA = 4&times; (22/7)&times; 72</p>
+      <p align="left">SA = 4 &times; 22 &times; 7</p>
+      <p align="left">SA = 616 cm2</p>
+      <p align="left">Therefore, the surface area of a sphere = 616 square units.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left">&nbsp;</p>
+      <p align="left">&nbsp;</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Mensuration Project | Designed by Ofosu Frank</p>
+    <p>Contact: <a href="mailto:ofosufrank0592320882@gmail.com">ofosufrank0592320882@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

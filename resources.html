@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Resources - Mensuration Learning Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Arial,sans-serif; }
+    body { background:#f9fbfd; color:#333; line-height:1.6; }
+
+    /* Navbar */
+    header.nav {
+      position: sticky; top:0; z-index:1000;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:15px 30px;
+      background: linear-gradient(90deg,#004aad,#ff416c);
+      color:#fff; flex-wrap:wrap;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+    header.nav .brand { display:flex; align-items:center; gap:10px; font-weight:bold; font-size:1.3em; }
+    header.nav .brand img { width:40px; height:40px; border-radius:50%; }
+    nav.nav-links { display:flex; flex-wrap:wrap; gap:15px; }
+    nav.nav-links a { color:#fff; text-decoration:none; padding:7px 14px; border-radius:20px; transition:0.3s; }
+    nav.nav-links a:hover, nav.nav-links a.active { background:#fff; color:#004aad; font-weight:bold; }
+
+    /* Hero */
+    .hero {
+      text-align:center; padding:60px 20px;
+      background: linear-gradient(135deg,#004aad,#ff416c);
+      color:#fff;
+    }
+    .hero h1 { font-size:2.5em; margin-bottom:10px; }
+    .hero p { font-size:1.2em; opacity:0.95; }
+
+    /* Sections */
+    section {
+      max-width:900px; margin:30px auto; padding:30px 20px;
+      border-radius:15px; background:#fff;
+      border-top:5px solid #004aad;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      margin-bottom:20px;
+    }
+    section h2 { color:#004aad; margin-bottom:15px; font-size:1.6em; }
+    ul { padding-left:20px; list-style: none; }
+    ul li { margin:10px 0; }
+    ul a { color:#004aad; text-decoration:none; font-weight:bold; transition:0.3s; }
+    ul a:hover { color:#ff416c; text-decoration:underline; }
+
+    /* Search bar */
+    .search-box {
+      display:flex; justify-content:center; margin:20px auto;
+      max-width:600px; gap:10px;
+    }
+    .search-box input {
+      flex:1; padding:10px 15px; border:2px solid #004aad;
+      border-radius:25px; outline:none; font-size:1em;
+    }
+    .search-box button {
+      padding:10px 20px; border:none; border-radius:25px;
+      background:#004aad; color:#fff; font-size:1em;
+      cursor:pointer; transition:0.3s;
+    }
+    .search-box button:hover { background:#ff416c; }
+
+    /* Footer */
+    footer {
+      text-align:center; padding:25px;
+      background: linear-gradient(90deg,#004aad,#ff416c);
+      color:#fff; font-size:0.95em; margin-top:50px;
+    }
+    footer a { color:#fff; text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="nav"> 
+    <div class="brand">
+      <img src="assets/triangle.png" alt="Mensuration Logo" />
+      <span>Mensuration • SHS</span>
+    </div>
+    <nav class="nav-links">
+      <p>&nbsp;</p>
+      <p><a href="home.html">Home</a>
+          <a href="2d_shapes.html">2D Shapes</a>
+          <a href="3d_shapes.html">3D Shapes</a>
+          <a href="applications.html">Applications</a>
+          <a href="videos.html">Videos</a>
+          <a href="quizzes.html">Quizzes</a>
+          <a href="resources.html" class="active">Resources</a>
+          <a href="authors.html">Authors</a>
+          <a href="about.html">About</a>
+      
+        </p>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Learning Resources</h1>
+    <p>Access study materials, external links, and video tutorials to master Mensuration.</p>
+  </section>
+
+  <!-- Search -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search resources...">
+    <button onClick="searchResources()">Search</button>
+  </div>
+
+ <!-- Notes -->
+<section>
+  <h2>📘 Downloadable Notes</h2>
+  <ul>
+    <li><a href="assets/LM-maths-section-7-Lversion.pdf" download>Shapes Notes (PDF)</a></li>
+    <li><a href="assets/Mensuration-and-Mensuration-Formulas-PDF.pdf" download>Formula Notes (PDF)</a></li>
+    <li><a href="assets/examples.docx" download>Mensuration Solved Examples (Word)</a></li>
+  </ul>
+</section>
+
+
+  <!-- Useful Links -->
+  <section>
+    <h2>🌍 Useful External Links</h2>
+    <ul>
+      <li><a href="https://www.khanacademy.org/math/geometry" target="_blank">Khan Academy – Geometry</a></li>
+      <li><a href="https://www.cuemath.com/geometry/mensuration/" target="_blank">Cuemath – Mensuration Guide</a></li>
+      <li><a href="https://www.waecgh.org" target="_blank">WAEC Ghana</a></li>
+    </ul>
+  </section>
+
+  <!-- Video Tutorials -->
+  <section>
+    <h2>🎥 Video Tutorials</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=R2QUB62UNok" target="_blank">Introduction to Mensuration</a></li>
+      
+      <li><a href= "https://www.youtube.com/watch?v=2eWIaBR4SZk" target="_blank">3D Shape Applications</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mensuration Project | Designed by Your Name</p>
+    <p>Contact: <a href="mailto:yourname@email.com">yourname@email.com</a></p>
+  </footer>
+
+  <!-- Simple Search Script -->
+  <script>
+    function searchResources() {
+      let input = document.getElementById("searchInput").value.toLowerCase();
+      let sections = document.querySelectorAll("section ul li");
+      sections.forEach(item => {
+        item.style.display = item.innerText.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>

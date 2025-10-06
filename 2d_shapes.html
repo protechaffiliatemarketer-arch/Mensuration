@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>2D Shapes - Mensuration Website</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background: #eef2f7; color: #333; line-height:1.6; }
+
+    /* Header / Navigation */
+    header.nav {
+      position: sticky; top:0; z-index:1000;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 30px;
+      background: linear-gradient(90deg, #1d2671, #c33764);
+      color: #fff;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    header.nav .brand { display: flex; align-items: center; gap: 10px; font-weight:bold; font-size:1.3em; }
+    header.nav .brand img { width:40px; height:40px; border-radius:50%; }
+    nav.nav-links { display: flex; flex-wrap: wrap; gap:15px; }
+    nav.nav-links a {
+      color:#fff; text-decoration:none; padding:7px 14px;
+      border-radius:20px; transition:0.3s;
+    }
+    nav.nav-links a:hover, nav.nav-links a.active {
+      background:#fff; color:#c33764; font-weight:bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align:center; padding:100px 20px 70px;
+      background: linear-gradient(135deg, #c33764, #1d2671);
+      color:#fff;
+      animation: fadeIn 1.2s ease-in;
+    }
+    .hero h1 { font-size:3em; margin-bottom:15px; }
+    .hero p { font-size:1.3em; opacity:0.95; }
+
+    /* Sections */
+    .section {
+      max-width:800px; margin:50px auto; padding:40px 20px;
+      border-radius:15px;
+      background: #ffffff;
+      animation: fadeInUp 1s ease-in;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    .section h2 { color:#1d2671; margin-bottom:20px; font-size:2.2em; text-align:center; }
+
+    /* Cards (now vertical) */
+    .card {
+      background:#fdfdfd; border-radius:15px; padding:25px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.5s ease-in;
+      text-align:center;
+      margin-bottom:25px;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.15); }
+    .card h3 { color:#c33764; margin-bottom:12px; }
+    .card p { font-size:1em; }
+    .icon { font-size:2.5em; margin-bottom:10px; }
+
+    /* Footer */
+    footer {
+      text-align:center; padding:25px;
+      background: linear-gradient(90deg, #c33764, #1d2671);
+      color:#fff; font-size:0.95em; margin-top:50px;
+    }
+    footer a { color:#fff; text-decoration:underline; }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity:0;} to {opacity:1;}
+    }
+    @keyframes fadeInUp {
+      from {opacity:0; transform:translateY(20px);} 
+      to {opacity:1; transform:translateY(0);}
+    }
+
+    @media(max-width:600px){
+      header.nav { flex-direction:column; align-items:flex-start; gap:10px; }
+      nav.nav-links { flex-direction:column; width:100%; }
+    }
+  .card1 {      background:#fdfdfd; border-radius:15px; padding:25px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.5s ease-in;
+      text-align:center;
+      margin-bottom:25px;
+}
+  .card2 {      background:#fdfdfd; border-radius:15px; padding:25px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.5s ease-in;
+      text-align:center;
+      margin-bottom:25px;
+}
+.card11 {background:#fdfdfd; border-radius:15px; padding:25px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.5s ease-in;
+      text-align:center;
+      margin-bottom:25px;
+}
+  </style>
+</head>
+<body>
+
+<header class="nav"> 
+    <div class="brand">
+      <img src="assets/triangle.png" alt="CT" />
+      <span>Mensuration • SHS</span>    </div>
+    <nav class="nav-links">
+    <p>&nbsp;</p>
+    <p><a href="home.html">Home</a>
+      <a href="intro.html">Introduction</a>
+       <a href="2d_shapes.html" class="active">2D Shapes</a>
+       <a href="3d_shapes.html">3D Shapes</a>
+       <a href="resources.html">Resources</a>
+       <a href="applications.html">Applications</a>
+       <a href="videos.html">Videos</a>
+   
+       <a href="authors.html">Authors</a>
+     </p>
+</header>
+
+  <section class="hero">
+    <h1>2D Shapes- Perimeter And Area </h1>
+    <p>Understand formulas and properties of 2D (flat) shapes.</p>
+  </section>
+
+<section class="section">
+    <h2 class="card">What are 2D Shapes?</h2>
+    <p>2D (two-dimensional) shapes are flat figures that have only length and width. They do not have thickness or depth. In maths, 2d shapes can be defined  as the plane figures that can be drawn on a flat (or plane) surface or a piece  of paper. All the 2d shapes have various parameters such as <a href="https://byjus.com/maths/area-and-perimeter/">area and perimeter</a>.  Some of the 2d shapes contain sides and corners, whereas some have curved  boundaries.<br>
+      <br>
+      <strong>2D  Shapes Names</strong>: circle, rectangle, triangle, square, oval, pentagon, parallelogram etc. </p>
+    <p>&nbsp;</p>
+    <p><strong> Key ideas</strong></p>
+    <p> &bull; Perimeter: refers to the total distance around the boundary of a two  dimensional shape. </p>
+    <p>&bull; Area: refers to the amount of space enclosed within the boundaries of a   two-dimensional shape.</p>
+</section>
+
+  <div class="section">
+    <h2><span class="card">Common 2D Shapes</span></h2>
+    <p>&nbsp;</p>
+    <div class="card">
+      <img src="assets/square2.jpg" alt="Author 2">      
+      <h3>Square</h3>
+      <p align="left">A square is a four-sided polygon (2d Shape), whose four sides are equal in  length and all the angles are equal to 90&deg;. It is considered to be a  two-dimensional regular quadrilateral. The diagonals of the square also bisect  each other at 90&deg;. A wall or a table where all the sides are equal are the  examples of square shape.</p>
+      <p align="left">All sides are equal. </p>
+      <p align="left">&nbsp;</p>
+      <p align="left">Area = l &times;l, </p>
+      <p align="left">Perimeter = 4L </p>
+      <p align="left">&nbsp;</p>
+      <p align="left">Q1.The length of rectangular field is 12m.  Find the area of the field along with its perimeter.</p>
+      <p align="left"><strong>Solution: </strong></p>
+      <p align="left">Given, Length = 12m</p>
+      <p align="left"> Area = length x length = 12 x 12 = 144 sq.m.</p>
+      <p align="left">Perimeter = 4  x 12= 48 m.</p>
+      <p align="left">&nbsp;</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/rectangle.png" alt="Author 2" width="250" height="195">      
+      <h3>Rectangle</h3>
+      <p align="left">A <strong>Rectangle</strong> is a four sided-polygon, having all the internal angles equal to 90   degrees. The two sides at each corner or vertex, meet at right angles.   The opposite sides of the rectangle are equal in length which makes it   different from a square.</p>
+      <p align="left">For example, if one side of a rectangle is 20 cm, then the side opposite to it is also 20 cm.</p>
+      <p align="left">Opposite sides equal.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"> Area = l × w, </p>
+      <p align="left">Perimeter = 2(l + w).</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Question 1</strong>. The length of rectangular field is 12m and width is 10m. Find the area of the field along with its perimeter.</p>
+      <p align="left"><strong>Solution: </strong></p>
+      <p align="left">Given, Length = 12m</p>
+      <p align="left">Width = 10m</p>
+      <p align="left">Therefore, Area = length x width = 12 x 10 = 120 sq.m.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left">Perimeter = 2 (length + width) = 2 x (12 + 10) = 2 x 22 = 44 m.</p>
+      <p align="left">&nbsp;</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/Triangles1.png" width="247" height="165">
+      <h3>Triangle</h3>
+      <p align="left">Triangle is a closed two-dimensional shape. It is a three-sided polygon.   All sides are made of straight lines. The point where two straight   lines join is the vertex. Hence, the triangle has three vertices. Each   vertex forms an angle. A perimeter of a triangle is defined as   the total length of the outer boundary of the triangle. Or we can say,   the perimeter of the triangle is equal to the sum of all its three   sides. The unit of the perimeter is same as the unit of sides of the   triangle.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left">If ABC is a triangle, where AB, BC and AC are the lengths of its sides, then the perimeter of ABC is given by:</p>
+      <p align="left">Perimeter = AB+BC+AC</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Question 1-</strong> Find the area of a triangle having base equal to 9 cm and height equal to 6 cm.</p>
+      <p align="left"><strong>Solution- </strong>&nbsp;We know that <strong>Area = 1/2&nbsp;&times; Base&nbsp;&times; Height</strong></p>
+      <p align="left">= 1/2&nbsp;&times; 9 &times; 6 cm2</p>
+      <p align="left">= 27 cm2</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Question 2: If ABC is a triangle where AB = 3cm, BC=5cm and AC = 4cm, then find its perimeter.</strong></p>
+      <p align="left">Solution: Given, ABC is a triangle.</p>
+      <p align="left">AB = 3cm</p>
+      <p align="left">BC = 5cm</p>
+      <p align="left">AC = 4cm</p>
+      <p align="left">As we know by the formula,&nbsp;</p>
+      <p align="left">Perimeter = Sum of all three sides</p>
+      <p align="left">P = AB + BC + AC</p>
+      <p align="left">P = 3+5+4</p>
+      <p align="left">P = 12cm</p>
+      <p align="left">&nbsp;</p>
+  </div>
+
+    <div class="card">
+      <img src="assets/Circles.png" width="352" height="184">
+      <h3>Circle</h3>
+      <p align="left">A circle is a closed two-dimensional figure in which the set of all   the points in the plane is equidistant from a given point called   &ldquo;centre&rdquo;. Every line that passes through the circle forms the line of   reflection symmetry. Also, it has rotational symmetry around the centre   for every angle. The circle formula in the plane is given as:</p>
+      <p align="left"><strong>(x-h)2 + (y-k)2 = r2</strong></p>
+      <p align="left">&nbsp;</p>
+      <p align="left">where (x,y) are the coordinate points<br>
+        (h,k) is the coordinate of the&nbsp;centre of a circle<br>
+        and r is the radius of a circle.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left">The circle is a two-dimensional figure, which has its area and   perimeter. The perimeter of the circle is also called the circumference,   which is the distance around the circle. The <a href="https://byjus.com/maths/area-circle/">area of the circle</a> is the region bounded by it in a 2D plane.</p>
+      <p align="left"> Area = &pi;r², </p>
+      <p align="left">Circumference = 2&pi;r.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Example 1:</strong></p>
+      <p align="left">Find the area and the circumference of a circle whose radius is 10 cm. (Take the value of&nbsp;&pi;&nbsp;= 3.14)</p>
+      <p align="left"><strong>Solution:</strong></p>
+      <p align="left">Given: Radius = 10 cm.</p>
+      <p align="left">Area =Area = &pi;r&sup2;&nbsp;</p>
+      <p align="left">= 3.14&nbsp; &times; 102</p>
+      <p align="left">A= 314 cm2</p>
+      <p align="left">Circumference,&nbsp;C = 2&pi;r</p>
+      <p align="left">C= 2 &times;3.14&times;&nbsp; 10&nbsp;</p>
+      <p align="left">Circumference= 62.8 cm</p>
+      <p align="left">&nbsp;</p>
+    </div>
+
+    <div class="card">
+      <div class="icon"><img src="assets/Parallelogram-2.png" width="405" height="209"></div>
+      <h3>Parallelogram</h3>
+      <p align="left">A parallelogram is a two-dimensional shape. It has four sides, in which   two pairs of sides are parallel. Also, the parallel sides are equal in   length. If the length of the parallel sides is not equal in measurement,   then the shape is not a parallelogram. Similarly, the opposite interior   angles of a parallelogram should always be equal. Otherwise, it is not a   parallelogram.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left">Area of a parallelogram is the region   occupied by it in a two-dimensional plane. Below is the formula to find   the parallelogram area:</p>
+      <p align="left"><strong> Area = base × height.</strong></p>
+      <p align="left">The perimeter of any shape is the total distance covered around the shape or the total length of any shape. Similarly, the&nbsp;<strong>perimeter of a parallelogram</strong>&nbsp;is the total distance of the boundaries of the parallelogram.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Perimeter = 2 (a+b) units&nbsp;</strong></p>
+      <p align="left"><strong>Example 1:</strong></p>
+      <p align="left">Find the perimeter of a parallelogram whose base and side lengths are 10cm and 5cm, respectively.</p>
+      <p align="left"><strong>Solution:</strong></p>
+      <p align="left">Given:</p>
+      <p align="left">Base length of a parallelogram = 10 cm</p>
+      <p align="left">Side length of a parallelogram = 5 cm</p>
+      <p align="left">We know that the perimeter of a parallelogram, P = 2(a+b) units.</p>
+      <p align="left">Substitute the values</p>
+      <p align="left">P = 2(10+5)</p>
+      <p align="left">P = 2(15)</p>
+      <p align="left">P = 30 cm</p>
+      <p align="left">Therefore, the perimeter of a parallelogram is 30 cm.</p>
+      <p align="left">&nbsp;</p>
+      <p align="left"><strong>Example 2:</strong> If the base of a parallelogram is equal to 5 cm and the height is 3 cm, then find its area.</p>
+      <p align="left">Solution: Given, the length of base=5 cm and height = 3 cm</p>
+      <p align="left">As per the formula, Area = 5&nbsp;&times; 3 = 15 sq.cm</p>
+      <p align="left">&nbsp;</p>
+      <p align="left">&nbsp;</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Mensuration Project | Designed by Ofosu Frank</p>
+    <p>Contact: <a href="mailto:ofosufrank0592320882@gmail.com">ofosufrank0592320882@gmail.com</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#eef2f7; display:flex; justify-content:center; align-items:center; height:100vh; }
+    .container { background:#fff; padding:20px; border-radius:10px; width:300px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+    h2 { text-align:center; }
+    input, button { width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px; }
+    button { background:#2196F3; color:#fff; border:none; cursor:pointer; }
+    button:hover { background:#1976D2; }
+    .link { text-align:center; margin-top:10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Signup</h2>
+    <input type="text" id="username" placeholder="Choose a username">
+    <input type="password" id="password" placeholder="Choose a password">
+    <button onclick="signup()">Signup</button>
+    <div class="link">Already have an account? <a href="index.html">Login</a></div>
+  </div>
+
+  <script>
+    function signup() {
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+
+      if (!username || !password) {
+        alert("Please fill all fields");
+        return;
+      }
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      if (users.find(u => u.username === username)) {
+        alert("Username already exists");
+        return;
+      }
+
+      users.push({ username, password });
+      localStorage.setItem("users", JSON.stringify(users));
+
+      alert("Signup successful! Please login.");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

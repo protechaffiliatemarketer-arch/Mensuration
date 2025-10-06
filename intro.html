@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Introduction to Mensuration</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* General Reset */
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background:#eef2f7; color:#333; line-height:1.6; }
+
+    /* Header / Navigation */
+    header.nav {
+      position: sticky;
+      top:0;
+      z-index:1000;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 30px;
+      background: linear-gradient(90deg, #1d2671, #c33764);
+      color:#fff;
+      flex-wrap:wrap;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+    header.nav .brand { display:flex; align-items:center; gap:10px; font-weight:bold; font-size:1.3em; }
+    header.nav .brand img { width:40px; height:40px; border-radius:50%; }
+    nav.nav-links { display:flex; flex-wrap:wrap; gap:15px; }
+    nav.nav-links a {
+      color:#fff; text-decoration:none; padding:7px 14px;
+      border-radius:20px; font-weight:500; transition:0.3s;
+    }
+    nav.nav-links a:hover, nav.nav-links a.active {
+      background:#fff; color:#c33764; font-weight:bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align:center;
+      padding:100px 20px 70px;
+      background: linear-gradient(135deg, #c33764, #1d2671);
+      color:#fff;
+      animation: fadeIn 1.2s ease-in;
+    }
+    .hero h1 { font-size:3em; margin-bottom:15px; }
+    .hero p { font-size:1.3em; opacity:0.95; }
+
+    /* Main / Sections */
+    main { max-width:1100px; margin:50px auto; padding:0 20px; }
+    .lesson-section {
+      background:#fff;
+      padding:25px;
+      border-radius:16px;
+      margin-bottom:30px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1s ease-in;
+    }
+    .lesson-section:hover { 
+      transform:translateY(-8px); 
+      box-shadow:0 12px 30px rgba(0,0,0,0.15); 
+    }
+    .lesson-section h2 { color:#1d2671; margin-bottom:15px; font-size:1.8em; }
+    .lesson-section p { font-size:1.05em; line-height:1.6; margin-bottom:10px; }
+    .lesson-section img { max-width:100%; border-radius:12px; margin-top:15px; }
+    .lesson-section1 {      
+      background:#fff;
+      padding:25px;
+      border-radius:12px;
+      margin-bottom:25px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    /* Footer */
+    footer {
+      text-align:center;
+      padding:25px;
+      background: linear-gradient(90deg, #c33764, #1d2671);
+      color:#fff;
+      font-size:0.95em;
+    }
+    footer a { color:#ffd700; text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {opacity:0; transform:translateY(20px);} 
+      to {opacity:1; transform:translateY(0);}
+    }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+
+    @media(max-width:600px){
+      header.nav { flex-direction:column; align-items:flex-start; gap:10px; }
+      nav.nav-links { flex-direction:column; width:100%; }
+    }
+.style4 {color: #FF0000}
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="brand">
+    <img src="assets/triangle.png" alt="CT" />
+    <span>Mensuration • SHS</span>
+  </div>
+  <nav class="nav-links">
+        <a href="home.html">Home</a>
+      <a href="intro.html" class="active">Introduction</a>
+      <a href="2d_shapes.html">2D Shapes</a>
+      <a href="3d_shapes.html">3D Shapes</a>
+      <a href="applications.html">Applications</a>
+      <a href="quizzes.html">Quizzes</a>
+      <a href="authors.html">Authors</a>
+    
+
+  
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Introduction to Mensuration</h1>
+    <p>Understand the basics and real-life applications of mensuration.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>What is Mensuration?</h2>
+    <p>Mensuration is a branch of mathematics that focuses on the measurement of geometric figures, specifically their lengths, areas, and volumes. It involves applying geometric principles to calculate these properties for both two-dimensional (plane) and three-dimensional (solid) shapes. In essence, mensuration provides the tools and techniques to quantify the size and extent of geometric objects.</p>
+    <span class="lesson-section1"><img src="assets/geo.png" width="354" height="249" alt="Geometric Figures"></span>
+  </div>
+
+  <div class="lesson-section">
+    <h2> INTRODUCTION   </h2>
+    <p><span class="style4">Perimeter</span>, <span class="style4">area</span> and <span class="style4">volume</span> are important concepts in geometry that help us   measure and compare the sizes of 2D and 3D shapes. Understanding these ideas   is useful for solving everyday problems, such as figuring out how much fencing   is needed for a garden, how much paint is needed to cover a wall or how much   liquid a container can hold. These concepts are connected and are the basis for   learning more advanced topics in geometry and calculus. They are also important   in subjects like physics and engineering, where measuring shapes and volumes is   needed for designing and analysing structures.</p>
+  </div>
+
+  <div class="lesson-section">
+    <h2>Key Concepts</h2>
+    <p>This lesson covers the basic concepts including perimeter of 2D shapes, area of plane figures, surface area of solids, and volume of 3D objects.</p>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Mensuration Project | Designed by Ofosu Frank</p>
+</footer>
+
+</body>
+</html>

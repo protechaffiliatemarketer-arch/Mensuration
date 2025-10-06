@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Site Map - Mensuration Project</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background: #eef2f7; color: #333; line-height:1.6; }
+
+    /* Header / Navigation */
+    header.nav {
+      position: sticky; top:0; z-index:1000;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 30px;
+      background: linear-gradient(90deg, #1d2671, #c33764);
+      color: #fff;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    header.nav .brand { display: flex; align-items: center; gap: 10px; font-weight:bold; font-size:1.3em; }
+    header.nav .brand img { width:40px; height:40px; border-radius:50%; }
+    nav.nav-links { display: flex; flex-wrap: wrap; gap:15px; }
+    nav.nav-links a {
+      color:#fff; text-decoration:none; padding:7px 14px;
+      border-radius:20px; transition:0.3s;
+    }
+    nav.nav-links a:hover, nav.nav-links a.active {
+      background:#fff; color:#c33764; font-weight:bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align:center; padding:100px 20px 70px;
+      background: linear-gradient(135deg, #c33764, #1d2671);
+      color:#fff;
+      animation: fadeIn 1.2s ease-in;
+    }
+    .hero h1 { font-size:3em; margin-bottom:15px; }
+    .hero p { font-size:1.3em; opacity:0.95; }
+
+    /* Sections */
+    .section {
+      max-width:900px; margin:50px auto; padding:40px 20px;
+      border-radius:15px;
+      background: #ffffff;
+      animation: fadeInUp 1s ease-in;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    .section h2 { color:#1d2671; margin-bottom:20px; font-size:2.2em; text-align:center; }
+
+    /* Cards (for site map) */
+    .card {
+      background:#fdfdfd; border-radius:15px; padding:25px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeInUp 1.2s ease-in;
+      text-align:center;
+      margin-bottom:25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap:10px;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.15); }
+    .card h3 { color:#c33764; margin-bottom:8px; }
+    .card p { font-size:1em; }
+    .icon { font-size:2.5em; margin-bottom:5px; }
+
+    /* Footer */
+    footer {
+      text-align:center; padding:25px;
+      background: linear-gradient(90deg, #c33764, #1d2671);
+      color:#fff; font-size:0.95em; margin-top:50px;
+    }
+    footer a { color:#fff; text-decoration:underline; }
+
+    /* Animations */
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @keyframes fadeInUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+
+    @media(max-width:600px){
+      header.nav { flex-direction:column; align-items:flex-start; gap:10px; }
+      nav.nav-links { flex-direction:column; width:100%; }
+    }
+  .style1 {color: #0000FF}
+  .style2 {color: #FFCC66}
+  </style>
+</head>
+<body>
+
+  <header class="nav"> 
+    <div class="brand">
+      <img src="assets/triangle.png" alt="CT" />
+      <span>Mensuration • SHS</span>
+    </div>
+    <nav class="nav-links">
+      <p>&nbsp;</p>
+      <p><a href="home.html">Home</a>
+          <a href="intro.html">Introduction</a>
+          <a href="2d_shapes.html">2D Shapes</a>
+          <a href="3d_shapes.html">3D Shapes</a>
+          <a href="videos.html">Videos</a>
+          <a href="quizzes.html">Quizzes</a>
+          <a href="authors.html">Authors</a>
+          <a href="sitemap.html" class="active">Site Map</a>
+      
+        </p>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Site Map</h1>
+    <p>Quick access to all pages of the Mensuration Project</p>
+  </section>
+
+  <div class="section">
+    <h2>All Pages</h2>
+
+    <div class="card">
+      <div class="icon"></div>
+      <p><img src="assets/site.png" width="775" height="388"></p>
+      <p align="left"><span class="style1">HOME PAGE</span>: Introduces <strong data-start="240" data-end="259">Mensuration Hub</strong> with a clean, welcoming design.Acts as the <strong data-start="484" data-end="495">gateway</strong> to all learning resources.</p>
+      <p align="left" class="style1">2D SHAPE PAGE</p>
+<p align="left" data-start="186" data-end="289">Lists <strong data-start="192" data-end="216">all common 2D shapes</strong> (triangle, square, rectangle, circle, trapezium, parallelogram, etc.). </p>
+       
+       <p align="left" data-start="292" data-end="354">Provides <strong data-start="301" data-end="317">key formulas</strong> for each shape (perimeter &amp; area). Acts as a <strong data-start="498" data-end="512">foundation</strong> for learning before moving to 3D shapes.</p>
+       
+  
+      <p align="left"><span class="style1">3D SHAPE PAGE</span>:</p>
+      <p align="left"><span class="style1">ABOUT PAGE</span>: Explains the <strong data-start="614" data-end="625">purpose</strong> of the Mensuration Learning Hub. States the <strong data-start="730" data-end="756">mission and objectives</strong> (making mensuration easier for SHS students). Displays <strong data-start="816" data-end="846">location &amp; contact details</strong> (e.g., Google Maps embed + contact form).</p>
+      <p align="left"><span class="style1">APPLICATION PAGE</span>: :Explains <strong data-start="1580" data-end="1598">real-life uses</strong> of mensuration in fields like: construction, agriculture, engineering and everyday problem solving. Helps students <strong data-start="1735" data-end="1765">connect theory to practice</strong>.</p>
+      <p align="left"><span class="style1">AUTHORS PAGE</span>: Introduces the <strong data-start="2127" data-end="2147">authors/creators</strong> of the Mensuration Hub.</p>
+      <p align="left"><span class="style1">INTRODUCTION PAGE</span>: Provides a brief explanation of the topic (Mensurations) </p>
+      <p align="left"><span class="style1">QUIZ PAGE</span>: Contains <strong data-start="1821" data-end="1844">interactive quizze</strong> which tests users&rsquo; understanding of formulas and applications.Provides <strong data-start="2015" data-end="2035">instant feedback</strong> (correct/incorrect answers).</p>
+      <p align="left"><span class="style1">RESOURCE PAGE</span>:Acts as a <strong data-start="1012" data-end="1023">library</strong> of downloadable and reference materials.</p>
+      <p align="left"><span class="style1">VIDEO PAGE</span>: Provides <strong data-start="1454" data-end="1482">embedded video tutorials</strong> (from YouTube or hosted sources).</p>
+      <p>&nbsp; </p>
+    </div>
+
+    </div>
+  <footer>
+    <p>© 2025 Mensuration Project | Designed by Ofosu Frank</p>
+    <p>Contact: <a href="mailto:ofosufrank0592320882@gmail.com" class="style2">ofosufrank0592320882@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

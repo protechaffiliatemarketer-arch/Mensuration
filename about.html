@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About - Mensuration Learning Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background: #eef2f7; color:#333; line-height:1.6; }
+
+    /* Header / Navigation */
+    header.nav {
+      position: sticky; top:0; z-index:1000;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 30px;
+      background: linear-gradient(90deg, #1d2671, #c33764);
+      color:#fff;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    header.nav .brand { display:flex; align-items:center; gap:10px; font-weight:bold; font-size:1.3em; }
+    header.nav .brand img { width:40px; height:40px; border-radius:50%; }
+    nav.nav-links { display:flex; flex-wrap:wrap; gap:15px; }
+    nav.nav-links a {
+      color:#fff; text-decoration:none; padding:7px 14px;
+      border-radius:20px; transition:0.3s;
+    }
+    nav.nav-links a:hover, nav.nav-links a.active {
+      background:#fff; color:#c33764; font-weight:bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align:center; padding:100px 20px 70px;
+      background: linear-gradient(135deg, #c33764, #1d2671);
+      color:#fff;
+      animation: fadeIn 1.2s ease-in;
+    }
+    .hero h1 { font-size:3em; margin-bottom:15px; }
+    .hero p { font-size:1.3em; opacity:0.95; }
+
+    /* Content Sections */
+    .section {
+      max-width:900px; margin:50px auto; padding:40px 20px;
+      border-radius:15px; background:#fff;
+      animation: fadeInUp 1s ease-in;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    }
+    .section h2 { color:#1d2671; margin-bottom:20px; font-size:2em; text-align:center; }
+    .section p, .section ul { font-size:1.05em; }
+    .section ul { padding-left:20px; }
+
+    /* Contact Section */
+    .contact-section {
+      max-width:800px; margin:50px auto; padding:40px 20px;
+      border-radius:15px; background:#fff;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align:center;
+    }
+    .contact-section h2 { color:#1d2671; margin-bottom:20px; font-size:2.2em; }
+    form {
+      display:flex; flex-direction:column; gap:15px;
+      max-width:600px; margin:0 auto;
+    }
+    input, textarea {
+      padding:12px; border:1px solid #ccc; border-radius:8px; font-size:1em;
+    }
+    button {
+      background: linear-gradient(90deg, #c33764, #1d2671);
+      color:#fff; padding:12px; font-size:1.1em; border:none; border-radius:8px;
+      cursor:pointer; transition:0.3s;
+    }
+    button:hover { opacity:0.9; }
+
+    /* Footer */
+    footer {
+      text-align:center; padding:25px;
+      background: linear-gradient(90deg, #c33764, #1d2671);
+      color:#fff; font-size:0.95em; margin-top:50px;
+    }
+    footer a { color:#fff; text-decoration:underline; }
+
+    /* Animations */
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @keyframes fadeInUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+
+    @media(max-width:600px){
+      header.nav { flex-direction:column; align-items:flex-start; gap:10px; }
+      nav.nav-links { flex-direction:column; width:100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="nav"> 
+    <div class="brand">
+      <img src="assets/triangle.png" alt="Mensuration Logo" />
+      <span>Mensuration • SHS</span>
+    </div>
+    <nav class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="about.html" class="active">About</a>
+   
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>About Us</h1>
+    <p>Learn more about the Mensuration Learning Hub</p>
+  </section>
+
+  <!-- Introduction -->
+  <section class="section">
+    <h2>Introduction</h2>
+    <p>
+      The <strong>Mensuration Learning Hub</strong> is an interactive educational platform 
+      designed to help Senior High School students in Ghana and beyond understand the 
+      principles of <em>2D and 3D mensuration</em>. 
+      The site combines lessons, worked examples, quizzes, and video tutorials to make learning 
+      mathematics both engaging and practical.
+    </p>
+  </section>
+
+  <!-- Mission -->
+  <section class="section">
+    <h2>Our Mission</h2>
+    <p>
+      To simplify mathematical concepts in mensuration and provide students with 
+      tools to practice, test themselves, and apply knowledge in real-world contexts.
+    </p>
+  </section>
+
+  <!-- Objectives -->
+  <section class="section">
+    <h2>Objectives</h2>
+    <ul>
+      <li>Provide clear explanations and worked examples of 2D and 3D shapes.</li>
+      <li>Offer interactive quizzes and practice tests for self-assessment.</li>
+      <li>Connect classroom learning to everyday applications of mensuration.</li>
+      <li>Support teachers and students with digital learning resources.</li>
+    </ul>
+  </section>
+
+  <!-- Credits -->
+  <section class="section">
+    <h2>Credits</h2>
+    <p>
+      This project was created by a dedicated team of students passionate about 
+      mathematics and technology. Special thanks to:
+    </p>
+    <ul>
+      <li>Ofosu Frank – Project Lead & Developer</li>
+      <li>Eric Amoasi – Content Writer</li>
+      <li>Ebenezer Wewoli – UI/UX Support</li>
+      <li>Adubofour Emmanuel Kwame – Editor</li>
+      <li>Onesimus Asante Kwadwo Kwabi – Tutor & Reviewer</li>
+    </ul>
+  </section>
+
+  <!-- Location -->
+  <section class="section">
+    <h2>Our Location</h2>
+    <p>Mensuration Learning Hub – Accra, Ghana.</p>
+    <div style="margin-top:20px; text-align:center;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.051061732128!2d-0.205744!3d5.5600148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9b0f1d8c3a3b%3A0x4cb68b1231f2a5e2!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1694600000000!5m2!1sen!2sgh" 
+        width="100%" height="350" 
+        style="border:0; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15);" 
+        allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <p>We’d love to hear from you! Send us a message below:</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mensuration Project | Designed by Ofosu Frank</p>
+    <p>Contact: <a href="mailto:ofosufrank0592320882@gmail.com">ofosufrank0592320882@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

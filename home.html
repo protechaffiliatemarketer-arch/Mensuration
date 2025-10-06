@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensuration Hub - Home</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background:#eef2f7; color:#333; line-height:1.6; }
+
+    /* Header */
+    header.nav {
+      position: sticky; top:0; z-index:1000;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:15px 30px;
+      background: linear-gradient(90deg, #1d2671, #c33764);
+      color:#fff;
+      flex-wrap:wrap;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+    header.nav .brand { display:flex; align-items:center; gap:10px; font-weight:bold; font-size:1.3em; }
+    header.nav .brand img { width:40px; height:40px; border-radius:50%; }
+    nav.nav-links { display:flex; flex-wrap:wrap; gap:15px; }
+    nav.nav-links a {
+      color:#fff; text-decoration:none; padding:7px 14px;
+      border-radius:20px; transition:0.3s;
+    }
+    nav.nav-links a:hover, nav.nav-links a.active {
+      background:#fff; color:#c33764; font-weight:bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align:center; padding:100px 20px 60px;
+      background: linear-gradient(135deg, #c33764, #1d2671);
+      color:#fff;
+      animation: fadeIn 1.2s ease-in;
+    }
+    .hero h1 { font-size:3.2em; margin-bottom:15px; }
+    .hero p { font-size:1.2em; opacity:0.95; margin-bottom:25px; max-width:700px; margin:auto; }
+    .hero a {
+      background:#fff; color:#c33764; padding:12px 24px;
+      text-decoration:none; border-radius:25px; font-weight:bold;
+      transition:0.3s;
+    }
+    .hero a:hover { background:#1d2671; color:#fff; }
+
+    /* Purpose */
+    .purpose {
+      max-width:900px; margin:50px auto; padding:30px;
+      text-align:center; background:#fff;
+      border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    }
+    .purpose h2 { color:#1d2671; margin-bottom:15px; }
+    .purpose p { font-size:1.05em; color:#444; }
+
+    /* Search Section */
+    .search-section {
+      text-align:center; margin:50px auto;
+    }
+    .search-bar {
+      display:flex; justify-content:center; gap:10px; flex-wrap:wrap;
+      max-width:600px; margin:auto;
+    }
+    .search-bar input {
+      flex:1; min-width:250px;
+      padding:12px 15px; border-radius:30px; border:1px solid #ccc;
+      outline:none; font-size:1em;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+    .search-bar button {
+      background:#c33764; color:#fff; border:none;
+      padding:12px 20px; border-radius:25px;
+      font-weight:bold; cursor:pointer;
+      transition:0.3s;
+    }
+    .search-bar button:hover { background:#1d2671; }
+
+    /* Features Section */
+    .features {
+      max-width:1100px; margin:40px auto; padding:40px 20px;
+      border-radius:15px; background:#fff;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    }
+    .features h2 {
+      color:#1d2671; text-align:center;
+      margin-bottom:40px; font-size:2.3em;
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+    .grid {
+      display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap:30px;
+    }
+    .card {
+      background:#fdfdfd; border-radius:15px; padding:25px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      text-align:center;
+      transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover { transform:translateY(-6px); box-shadow:0 12px 25px rgba(0,0,0,0.2); }
+    .card img { width:80px; margin-bottom:15px; }
+    .card h3 { color:#c33764; margin-bottom:10px; }
+    .card p { font-size:0.95em; color:#555; }
+
+    /* Comment Section */
+    .comments {
+      max-width:800px; margin:60px auto; padding:30px; background:#fff;
+      border-radius:15px; box-shadow:0 6px 15px rgba(0,0,0,0.1);
+    }
+    .comments h2 { color:#1d2671; margin-bottom:20px; text-align:center; }
+    .comments textarea {
+      width:100%; padding:15px; border-radius:10px; border:1px solid #ccc;
+      resize:none; font-size:1em; margin-bottom:15px;
+    }
+    .comments button {
+      background:#c33764; color:#fff; padding:10px 20px;
+      border:none; border-radius:20px; font-weight:bold;
+      cursor:pointer; transition:0.3s;
+    }
+    .comments button:hover { background:#1d2671; }
+    .comment-list { margin-top:20px; }
+    .comment-item {
+      background:#f7f7f7; padding:12px; border-radius:10px;
+      margin-bottom:10px; border-left:4px solid #c33764;
+    }
+
+    /* Footer */
+    footer {
+      text-align:center; padding:25px;
+      background: linear-gradient(90deg, #c33764, #1d2671);
+      color:#fff; font-size:0.95em; margin-top:60px;
+    }
+    footer a { color:#fff; text-decoration:underline; }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity:0;} to {opacity:1;}
+    }
+  </style>
+</head>
+<script>
+  if (!localStorage.getItem("loggedInUser")) {
+    window.location.href = "index.html"; // back to login page
+  }
+</script>
+
+<body>
+  <header class="nav"> 
+    <div class="brand">
+      <p><img src="assets/triangle.png" alt="CT" />
+          <span>Mensuration • SHS</span>  </p>
+    </div>
+    <nav class="nav-links">
+      <p>&nbsp;</p>
+      <p><a href="home.html" class="active">Home</a>
+        <a href="intro.html">Introduction</a>
+         <a href="2d_shapes.html">2D Shapes</a>
+         <a href="3d_shapes.html">3D Shapes</a>
+
+         <a href="applications.html">Applications</a>
+         <a href="videos.html">Videos</a>
+		   <a href="sitemap.html">Site Map</a>
+         <a href="about.html">About</a>
+         <a href="authors.html">Authors</a>
+        
+          <a href="#" id="logoutBtn" onClick="logout()">Logout</a>      </p>
+    </nav>
+  </header>
+  <script>
+  // Block access if user is not logged in
+  if (!localStorage.getItem("loggedInUser")) {
+    window.location.href = "login.html";
+  }
+</script>
+
+
+  <!-- Hero -->
+<section class="hero">
+    <h1>Welcome to the Mensuration Hub</h1>
+    <p>Learn geometry, master formulas, and apply mensuration in real life through interactive lessons, examples, and quizzes.</p>
+    <p>&nbsp;</p>
+    <p><a href="intro.html">Get Started</a>
+      </p>
+</section>
+
+  <!-- Purpose -->
+  <section class="purpose">
+    <h2>Our Purpose</h2>
+    <p>
+      This site was created to make <strong>mensuration simple and practical</strong> for SHS 2-3 students.  
+      Our goal is to help you understand <em>2D and 3D shapes, formulas, and real-world applications</em>  
+      in an engaging and interactive way. Explore lessons, try quizzes, and build confidence in geometry!
+    </p>
+  </section>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <h2>Search the Hub</h2>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search topics (e.g., 2D shapes, quizzes, applications)...">
+      <button onClick="searchTopics()">Search</button>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>Explore Our Resources</h2>
+    <div class="grid" id="featureGrid">
+      <div class="card" data-title="2D Shapes">
+        <img src="assets/triangle.png" alt="2D Shapes">
+        <h3>2D Shapes</h3>
+        <p>Understand perimeters and areas of basic and complex 2D figures.</p>
+      </div>
+      <div class="card" data-title="3D Shapes">
+        <img src="assets/cone1.png" alt="3D Shapes">
+        <h3>3D Shapes</h3>
+        <p>Learn surface areas and volumes of solid figures like cubes, spheres, and cones.</p>
+      </div>
+      <div class="card" data-title="Applications">
+        <img src="assets/design1.jpg" alt="Applications">
+        <h3>Applications</h3>
+        <p>See how mensuration is used in construction, design, science, and daily life.</p>
+      </div>
+      <div class="card" data-title="Quizzes">
+        <img src="assets/quiz.jpg" alt="Quizzes">
+        <h3>Quizzes</h3>
+        <p>Test your understanding with interactive quizzes and challenges.</p>
+      </div>
+      <div class="card" data-title="Authors">
+        <img src="assets/frank.jpg" alt="Authors">
+        <h3>Meet the Authors</h3>
+        <p>Get to know the dedicated team behind this project.</p>
+      </div>
+      <div class="card" data-title="Contacts">
+        <img src="assets/call.png" alt="Contact">
+        <h3>Contact Us</h3>
+        <p>Have questions? Reach out to us for support or collaboration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comments -->
+  <section class="comments">
+    <h2>Leave a Comment</h2>
+    <textarea id="commentBox" rows="4" placeholder="Write your feedback..."></textarea>
+    <button onClick="addComment()">Post Comment</button>
+    <div class="comment-list" id="commentList"></div>
+  </section>
+
+  <footer>
+
+    <p>© 2025 Mensuration Project | Designed by Ofosu Frank</p>
+    <p>Contact: <a href="mailto:ofosufrank0592320882@gmail.com">ofosufrank0592320882@gmail.com</a></p>
+  </footer>
+
+  <script>
+  
+
+    // Search button behavior
+    function searchTopics() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const pages = {
+        "2d": "2d_shapes.html",
+        "2d shapes": "2d_shapes.html",
+        "3d": "3d_shapes.html",
+        "3d shapes": "3d_shapes.html",
+        "applications": "applications.html",
+        "quizzes": "quizzes.html",
+        "authors": "authors.html",
+        "contacts": "contact.html",
+        "contact": "contact.html"
+      };
+      if(pages[query]) {
+        window.location.href = pages[query];
+      } else {
+        alert("No direct match found. Try keywords like '2D shapes', '3D shapes', 'quizzes'.");
+      }
+    }
+
+    // Comment system (localStorage)
+    function loadComments() {
+      const comments = JSON.parse(localStorage.getItem('comments')) || [];
+      const commentList = document.getElementById('commentList');
+      commentList.innerHTML = '';
+      comments.forEach(c => {
+        const div = document.createElement('div');
+        div.className = 'comment-item';
+        div.textContent = c;
+        commentList.appendChild(div);
+      });
+    }
+    function addComment() {
+      const box = document.getElementById('commentBox');
+      const text = box.value.trim();
+      if(text) {
+        const comments = JSON.parse(localStorage.getItem('comments')) || [];
+        comments.push(text);
+        localStorage.setItem('comments', JSON.stringify(comments));
+        box.value = '';
+        loadComments();
+      }
+    }
+    loadComments();
+
+    // Logout
+    function logout() {
+  localStorage.removeItem("loggedInUser");
+  window.location.href = "index.html"; // back to login
+}
+
+    }
+  </script>
+ <script>
+  function logout() {
+    localStorage.removeItem("loggedInUser");
+    window.location.href = "index.html"; // ✅ this must match your login page filename
+  }
+</script>
+
+
+</body>
+</html>

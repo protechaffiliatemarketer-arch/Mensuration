@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Authors - Mensuration Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background:#eef2f7; color:#333; line-height:1.6; }
+
+    /* Header */
+    header.nav {
+      position: sticky; top:0; z-index:1000;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:15px 30px;
+      background: linear-gradient(90deg, #1d2671, #c33764);
+      color:#fff; flex-wrap:wrap;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+    header.nav .brand { display:flex; align-items:center; gap:10px; font-weight:bold; font-size:1.3em; }
+    header.nav .brand img { width:40px; height:40px; border-radius:50%; }
+    nav.nav-links { display:flex; flex-wrap:wrap; gap:15px; }
+    nav.nav-links a {
+      color:#fff; text-decoration:none; padding:7px 14px;
+      border-radius:20px; transition:0.3s;
+    }
+    nav.nav-links a:hover, nav.nav-links a.active {
+      background:#fff; color:#c33764; font-weight:bold;
+    }
+
+    /* Hero */
+    .hero {
+      text-align:center; padding:100px 20px 80px;
+      background: linear-gradient(135deg, #c33764, #1d2671);
+      color:#fff;
+      animation: fadeIn 1.2s ease-in;
+    }
+    .hero h1 { font-size:3em; margin-bottom:15px; }
+    .hero p { font-size:1.2em; opacity:0.95; }
+
+    /* Authors Section */
+    .authors {
+      max-width:1200px; margin:60px auto; padding:40px 20px;
+      border-radius:20px; background:#fff;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    }
+    .authors h2 { color:#1d2671; text-align:center; margin-bottom:40px; font-size:2.4em; }
+
+    .grid {
+      display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap:30px;
+    }
+    .card {
+      background:#fdfdfd; border-radius:15px; padding:25px;
+      box-shadow:0 6px 15px rgba(0,0,0,0.1);
+      text-align:center; transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 12px 25px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width:120px; height:120px; border-radius:50%;
+      margin-bottom:15px; border:5px solid #1d2671;
+      object-fit:cover;
+      transition:transform 0.3s;
+    }
+    .card:hover img { transform:scale(1.05); }
+    .card h3 { color:#c33764; margin-bottom:8px; font-size:1.2em; }
+    .card p { font-size:0.95em; color:#555; line-height:1.5; }
+
+    /* Footer */
+    footer {
+      text-align:center; padding:25px;
+      background: linear-gradient(90deg, #c33764, #1d2671);
+      color:#fff; font-size:0.95em; margin-top:60px;
+    }
+    footer a { color:#fff; text-decoration:underline; }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity:0;} to {opacity:1;}
+    }
+  .style1 {color: #FFCC99}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="nav"> 
+    <div class="brand">
+      <img src="assets/triangle.png" alt="Logo" />
+      <span>Mensuration • SHS</span>
+    </div>
+    <nav class="nav-links">
+      <p>&nbsp;</p>
+      <p><a href="home.html">Home</a>
+    
+         <a href="authors.html" class="active">Authors</a>
+        
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Meet the Authors</h1>
+    <p>The dedicated team behind the Mensuration Learning Hub</p>
+  </section>
+
+  <!-- Authors Section -->
+  <section class="authors">
+    <h2>Our Team</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/frank.jpg" alt="Ofosu Frank">
+        <h3>Ofosu Frank : </h3>
+        <h3>5230110192 </h3>
+        <p>Project Lead, Designer & Developer. Passionate about blending education with technology for impactful learning.</p>
+      </div>
+      <div class="card">
+        <img src="assets/eric.jpg" alt="Eric Amoasi">
+        <h3>Eric Amoasi:</h3>
+        <h3>5230110304</h3>
+        <p>Researcher & Mathematics Content Writer. Simplifies complex concepts to make learning more approachable.</p>
+      </div>
+      <div class="card">
+        <img src="assets/eben.jpg" alt="Ebenezer Wewoli">
+        <h3>Ebenezer Wewoli :</h3>
+        <h3>5230110291 </h3>
+        <p>UI/UX Designer. Focused on crafting engaging user experiences that make studying enjoyable.</p>
+      </div>
+      <div class="card">
+        <img src="assets/adu.jpg" alt="Adubofour Emmanuel Kwame">
+        <h3>Adubofour Emmanuel Kwame</h3>
+        <p>Editor & Proofreader. Ensures accuracy, clarity, and readability in all learning resources.</p>
+      </div>
+      <div class="card">
+        <img src="assets/one.jpg" alt="Onesimus Asante Kwadwo Kwabi">
+        <h3>Onesimus Asante Kwadwo Kwabi</h3>
+        <p>Math Tutor & Reviewer. Brings real-life applications into the lessons for deeper understanding.</p>
+      </div>
+	    <div class="card">
+        <img src="assets/ok.jpg" alt="Okyere">
+        <h3>Nana Okyere A. Yeboah:</h3>
+        <h3>5230110011 </h3>
+        <p>Math Tutor & Reviewer. Brings real-life applications into the lessons for deeper understanding.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Mensuration Learning Hub | Designed by Ofosu Frank & Team</p>
+    <p>Contact: <a href="mailto:ofosufrank0592320882@gmail.com" class="style1">ofosufrank0592320882@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

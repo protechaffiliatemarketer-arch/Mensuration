@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quizzes - Mensuration Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+    body { background: #eef2f7; color: #333; line-height:1.6; }
+
+    header.nav {
+      position: sticky; top:0; z-index:1000;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:15px 30px;
+      background: linear-gradient(90deg, #1d2671, #c33764);
+      color:#fff; flex-wrap:wrap;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+    header.nav .brand { display:flex; align-items:center; gap:10px; font-weight:bold; font-size:1.3em; }
+    header.nav .brand img { width:40px; height:40px; border-radius:50%; }
+    nav.nav-links { display:flex; flex-wrap:wrap; gap:15px; }
+    nav.nav-links a { color:#fff; text-decoration:none; padding:7px 14px; border-radius:20px; font-weight:500; transition:0.3s; }
+    nav.nav-links a:hover, nav.nav-links a.active { background:#fff; color:#c33764; font-weight:bold; }
+
+    .hero { text-align:center; padding:50px 20px; background: linear-gradient(135deg, #c33764, #1d2671); color:#fff; }
+    .hero h1 { font-size:2.5em; }
+    .timer { font-size:1.2em; margin-top:10px; color:#ffd700; }
+
+    .container { max-width:1000px; margin:40px auto; padding:0 20px; }
+    .card { background:#fff; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 6px 18px rgba(0,0,0,0.1); }
+    .card h3 { color:#c33764; margin-bottom:10px; font-size:1.2em; }
+    .options label { display:block; padding:6px; margin:4px 0; border-radius:6px; cursor:pointer; transition: background 0.3s; }
+    .options input { margin-right:8px; }
+    .options label:hover { background:#f1f1f1; }
+
+    .submit-btn {
+      display:block; margin:30px auto; padding:12px 20px;
+      background:#1d2671; color:#fff; font-size:1.1em;
+      border:none; border-radius:8px; cursor:pointer; transition:0.3s;
+    }
+    .submit-btn:hover { background:#c33764; }
+
+    .result-box { text-align:center; font-size:1.2em; margin-top:20px; font-weight:bold; color:#1d2671; }
+
+    .review { max-width:1000px; margin:30px auto; padding:20px; background:#fff; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.1); }
+    .review h2 { text-align:center; color:#c33764; margin-bottom:20px; }
+    .review .question { margin-bottom:20px; }
+    .correct { color:green; font-weight:bold; }
+    .incorrect { color:red; font-weight:bold; }
+
+    footer { text-align:center; padding:25px; background: linear-gradient(90deg, #c33764, #1d2671); color:#fff; font-size:0.95em; margin-top:40px; }
+    footer a { color:#ffd700; text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+<header class="nav"> 
+  <div class="brand">
+    <img src="assets/triangle.png" alt="CT" />
+    <span>Mensuration • SHS</span>
+  </div>
+  <nav class="nav-links">
+    <p>&nbsp;</p>
+    <p><a href="home.html">Home</a>
+        <a href="intro.html">Introduction</a>
+        <a href="2d_shapes.html">2D Shapes</a>
+        <a href="3d_shapes.html">3D Shapes</a>
+        <a href="applications.html">Applications</a>
+        <a href="quizzes.html" class="active">Quizzes</a>
+        <a href="authors.html">Authors</a>
+        <a href="sitemap.html">Site Map</a>
+     
+      </p>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Mensuration Quiz</h1>
+  <p>20 Multiple Choice Questions – You have <span class="timer" id="timer">30:00</span> minutes</p>
+</section>
+
+<div class="container" id="quiz-container"></div>
+
+<button class="submit-btn" onClick="submitQuiz()">Submit Quiz</button>
+<div class="result-box" id="result"></div>
+<div class="review" id="review" style="display:none;"></div>
+
+<footer>
+  <p>© 2025 Mensuration Project | Designed by Ofosu Frank</p>
+  <p>Contact: <a href="mailto:ofosufrank0592320882@gmail.com">ofosufrank0592320882@gmail.com</a></p>
+</footer>
+
+<script>
+  // Question Bank
+  const questions = [
+    { q:"Find the area of a rectangle with length 12 cm and breadth 8 cm.", options:["96 cm²","80 cm²","100 cm²","120 cm²"], answer:0 },
+    { q:"A cube has side 6 cm. Find its volume.", options:["126 cm³","216 cm³","64 cm³","150 cm³"], answer:1 },
+    { q:"Find the circumference of a circle with radius 7 cm (p=3.14).", options:["44 cm","22 cm","50 cm","30 cm"], answer:0 },
+    { q:"A cylinder has radius 5 cm and height 10 cm. Find its volume (p=3.14).", options:["785 cm³","1570 cm³","1250 cm³","500 cm³"], answer:1 },
+    { q:"The radius of a sphere is 3 cm. Find its volume.", options:["113.04 cm³","100 cm³","150 cm³","90 cm³"], answer:0 },
+    { q:"Find the perimeter of a square with side 9 cm.", options:["36 cm","27 cm","18 cm","45 cm"], answer:0 },
+    { q:"A cone has radius 7 cm and height 24 cm. Find its volume.", options:["1232 cm³","1231 cm³","1230 cm³","1290 cm³"], answer:0 },
+    { q:"Find the area of a triangle with base 12 cm and height 5 cm.", options:["30 cm²","25 cm²","60 cm²","40 cm²"], answer:2 },
+    { q:"A cuboid has dimensions 5 cm × 4 cm × 3 cm. Find its volume.", options:["60 cm³","50 cm³","40 cm³","70 cm³"], answer:0 },
+    { q:"Find the diagonal of a square of side 10 cm.", options:["10 cm","15 cm","14.14 cm","20 cm"], answer:2 },
+    { q:"The slant height of a cone is 13 cm and radius 5 cm. Find its curved surface area.", options:["204 cm²","220 cm²","200 cm²","180 cm²"], answer:0 },
+    { q:"Find the area of a parallelogram with base 10 cm and height 8 cm.", options:["80 cm²","100 cm²","60 cm²","70 cm²"], answer:0 },
+    { q:"A sphere has radius 7 cm. Find its surface area.", options:["616 cm²","600 cm²","650 cm²","700 cm²"], answer:0 },
+    { q:"A cube has surface area 294 cm². Find its side length.", options:["7 cm","6 cm","5 cm","8 cm"], answer:0 },
+    { q:"Find the radius of a circle with area 154 cm² (p=3.14).", options:["7 cm","10 cm","14 cm","12 cm"], answer:0 },
+    { q:"Find the volume of a hemisphere of radius 7 cm.", options:["718.7 cm³","770 cm³","800 cm³","700 cm³"], answer:0 },
+    { q:"A cylinder has height 14 cm and radius 7 cm. Find its curved surface area.", options:["616 cm²","700 cm²","650 cm²","800 cm²"], answer:0 },
+    { q:"A square has diagonal 10v2 cm. Find its area.", options:["200 cm²","100 cm²","150 cm²","180 cm²"], answer:0 },
+    { q:"A rectangular field is 50 m long and 40 m wide. Find its area.", options:["2000 m²","1000 m²","2500 m²","3000 m²"], answer:0 },
+    { q:"A cone has radius 7 cm and height 24 cm. Find its slant height.", options:["25 cm","24 cm","26 cm","23 cm"], answer:0 }
+  ];
+
+  const container = document.getElementById("quiz-container");
+
+  // Shuffle helper
+  function shuffle(array){
+    for(let i=array.length-1; i>0; i--){
+      const j = Math.floor(Math.random() * (i+1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  // Shuffle questions
+  shuffle(questions);
+
+  // Render questions with shuffled options
+  questions.forEach((item, index) => {
+    let card = document.createElement("div");
+    card.className = "card";
+
+    let opts = item.options.map((opt,i)=>({opt,i}));
+    shuffle(opts);
+    let newAnswerIndex = opts.findIndex(o => o.i === item.answer);
+    item.answer = newAnswerIndex;
+    item.options = opts.map(o=>o.opt);
+
+    card.innerHTML = `<h3>Q${index+1}. ${item.q}</h3>
+      <div class="options">
+        ${item.options.map((opt,i)=>`
+          <label><input type="radio" name="q${index}" value="${i}"> ${opt}</label>
+        `).join('')}
+      </div>`;
+    container.appendChild(card);
+  });
+
+  // Timer 30 mins
+  let timeLeft = 30 * 60;
+  const timerEl = document.getElementById("timer");
+  const countdown = setInterval(() => {
+    let min = Math.floor(timeLeft / 60);
+    let sec = timeLeft % 60;
+    timerEl.textContent = `${min}:${sec<10?"0"+sec:sec}`;
+    timeLeft--;
+
+    if(timeLeft < 0){
+      clearInterval(countdown);
+      submitQuiz();
+    }
+  }, 1000);
+
+  // Submit and Review
+  function submitQuiz(){
+    clearInterval(countdown);
+    let score = 0;
+    let reviewHTML = "<h2>Review</h2>";
+
+    questions.forEach((item, i)=>{
+      let selected = document.querySelector(`input[name="q${i}"]:checked`);
+      let selectedVal = selected ? parseInt(selected.value) : null;
+
+      if(selectedVal === item.answer) score++;
+
+      reviewHTML += `<div class="question">
+        <p><strong>Q${i+1}:</strong> ${item.q}</p>
+        <p>Your Answer: ${selected ? item.options[selectedVal] : "<em>Not Answered</em>"}</p>
+        <p>Correct Answer: <span class="${selectedVal===item.answer?'correct':'incorrect'}">${item.options[item.answer]}</span></p>
+      </div>`;
+    });
+
+    document.getElementById("result").textContent = `You scored ${score} / ${questions.length}`;
+    document.getElementById("review").innerHTML = reviewHTML;
+    document.getElementById("review").style.display = "block";
+
+    document.querySelectorAll("input").forEach(i => i.disabled = true);
+    document.querySelector(".submit-btn").disabled = true;
+  }
+</script>
+
+</body>
+</html>

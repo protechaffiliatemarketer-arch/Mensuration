@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#eef2f7; display:flex; justify-content:center; align-items:center; height:100vh; }
+    .container { background:#fff; padding:20px; border-radius:10px; width:300px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+    h2 { text-align:center; }
+    input, button { width:100%; padding:10px; margin:10px 0; border:1px solid #ccc; border-radius:5px; }
+    button { background:#4CAF50; color:#fff; border:none; cursor:pointer; }
+    button:hover { background:#45a049; }
+    .link { text-align:center; margin-top:10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <div class="link">Don't have an account? <a href="signup.html">Sign up</a></div>
+  </div>
+
+  <script>
+    function login() {
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+      let found = users.find(u => u.username === username && u.password === password);
+
+      if (found) {
+        localStorage.setItem("loggedInUser", username);
+        window.location.href = "home.html"; // Redirect to homepage
+      } else {
+        alert("Invalid username or password.");
+      }
+    }
+  </script>
+</body>
+</html>
